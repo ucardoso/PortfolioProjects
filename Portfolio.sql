@@ -14,7 +14,7 @@ From PortfolioProject..CovidDeaths
 order by 1,2
 
 -- Looking at Total Cases vs Total Deaths 
--- It shows the lilelihood (chances) of dying if you contract covid in your country
+-- It shows the likelihood (chances) of dying if you contract covid in your country
 
 Select Location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DearthPercentage
 From PortfolioProject..CovidDeaths
