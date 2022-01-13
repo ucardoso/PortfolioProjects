@@ -10,7 +10,7 @@ From PortfolioProject.dbo.NashvilleHousing
 --Standardize Date Format 
 
 Select SaleDate
-From PortfolioProject.dbo.NashvilleHousing   -- It comes with Sale date format with time in the end whihc is not necessary.
+From PortfolioProject.dbo.NashvilleHousing   -- It comes with Sale date format with time in the end which is not necessary.
 
 Select SaleDate, CONVERT(date, SaleDate)
 From PortfolioProject.dbo.NashvilleHousing -- still showing time
@@ -198,13 +198,13 @@ SET SoldAsVacant = CASE When SoldAsVacant = 'Y' THEN 'Yes'
 Select *,
 	ROW_NUMBER() OVER(
 	PARTITION BY ParcelID,
-			     PropertyAddress,
-				 SalePrice,
-				 SaleDate,
-				 LegalReference
-				 Order by 
-					UniqueID
-					) row_num
+		     PropertyAddress,
+		     SalePrice,
+		     SaleDate,
+		     LegalReference
+		     Order by 
+		     UniqueID
+		     ) row_num
 
 From PortfolioProject.dbo.NashvilleHousing   --- row_num will show numbers like 1 and 2 (it means the number of duplicates)
 
