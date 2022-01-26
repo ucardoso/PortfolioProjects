@@ -9,7 +9,7 @@ order by 3,4
 --From PortfolioProject..CovidVaccinations
 --order by 3,4
 
---Select Dta that we are going to be using 
+--Select Data that we are going to be using 
 
 Select Location, date, total_cases, new_cases, total_deaths, population
 From PortfolioProject..CovidDeaths
